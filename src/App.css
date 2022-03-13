@@ -1,0 +1,18 @@
+* {
+  user-select: none;
+}
+
+body {
+  background-color: rgb(255, 253, 235);
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

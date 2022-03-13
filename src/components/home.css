@@ -1,0 +1,57 @@
+.home {
+  flex: 2;
+  flex-direction: column;
+  display: flex;
+  background-image: url("/public/bg.svg");
+}
+
+.instructions {
+  color: azure;
+  margin: 5px;
+}
+
+.wall-img {
+  padding: 3px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+
+#titlecontainer {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  margin: 0;
+  font-size: 15vw;
+  background-size: 400%;
+  background-image: repeating-linear-gradient(
+    30deg,
+    red,
+    rgb(255, 107, 139) 8%,
+    rgb(14, 230, 129) 16%,
+    rgb(32, 148, 194) 24%,
+    rgb(57, 57, 255) 32%,
+    rgb(204, 12, 243) 40%,
+    rgb(255, 0, 0) 48%
+  );
+
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.demobtn {
+  outline: none;
+  cursor: pointer;
+  color: azure;
+  padding: 8px 12px;
+  align-self: center;
+  border-radius: 5px;
+  max-width: max-content;
+  border: 1px solid blueviolet;
+  background: linear-gradient(45deg, rgb(56, 99, 192), rgb(20, 0, 201));
+}

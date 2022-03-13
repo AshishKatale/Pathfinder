@@ -1,0 +1,92 @@
+.cell {
+  position: relative;
+  user-select: all;
+  background-color: #7cff99;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+}
+
+.cell img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.visit-animate {
+  animation: animate 150ms forwards;
+}
+
+.path-animate {
+  animation: animatePath 150ms forwards;
+}
+
+.wall-animate {
+  animation: animateWall 150ms forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+    background-color: rgb(0, 255, 170);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.8);
+    background-color: #58aeff;
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(198, 115, 253);
+  }
+}
+
+@keyframes animateWall {
+  0% {
+    transform: scale(1);
+    background-color: rgb(0, 255, 170);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.8);
+    background-color: #00a545;
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animatePath {
+  0% {
+    transform: scale(1);
+    background-color: rgb(0, 162, 255);
+  }
+  25% {
+    transform: scale(0.9) skew(-10deg);
+  }
+  50% {
+    transform: scale(0.8) skew(0deg);
+    background-color: #f138e8;
+  }
+  75% {
+    transform: scale(0.9) skew(10deg);
+  }
+  100% {
+    transform: scale(1) skew(0deg);
+    background-color: rgb(255, 174, 0);
+  }
+}

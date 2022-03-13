@@ -1,0 +1,111 @@
+.topbarcontainer {
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffddfd;
+}
+
+.topbar {
+  height: auto;
+  flex-grow: 1;
+  display: flex;
+  padding: 1vmin;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ffddfd;
+  justify-content: space-around;
+}
+
+.topbaricon {
+  height: 5vh;
+  flex-grow: 1;
+  margin: 1vmax;
+  font-size: 2vmin;
+  flex-basis: 15vw;
+  font-weight: 700;
+  line-height: 5vh;
+  text-align: center;
+  border-radius: 1vmin;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid black;
+}
+
+@media screen and (orientation: portrait) {
+  .topbaricon {
+    font-size: 1.5vmax;
+  }
+}
+
+.wall {
+  color: rgb(255, 255, 255);
+  line-height: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(45deg, rgb(12, 12, 12), rgb(0, 0, 0));
+}
+
+.reset {
+  color: azure;
+  line-height: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(45deg, rgb(90, 210, 250), rgb(71, 71, 255));
+}
+.reset:active,
+.wall:active {
+  transform: scale(0.97);
+}
+.reset:disabled,
+.wall:disabled {
+  color: rgb(56, 56, 56);
+  cursor: default;
+  line-height: 100%;
+  font-weight: 700;
+  background: linear-gradient(45deg, rgb(170, 188, 194), rgb(99, 125, 136));
+}
+
+#speed {
+  transform: translateY(-0.5vmin);
+  outline: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+#speed-input-container {
+  border: none;
+  height: auto;
+  line-height: 3vh;
+}
+
+#speed::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 0.5vmin;
+  background: linear-gradient(90deg, green, blue, red);
+}
+
+#speed::-moz-range-track {
+  -webkit-appearance: none;
+  height: 0.5vmin;
+  background: linear-gradient(90deg, green, blue, red);
+}
+
+#speed::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  transform: translateY(-1.3vmin);
+  border-radius: 0.5vmin;
+  border-radius: 50%;
+  height: 3vmin;
+  width: 1.5vmin;
+  background-color: rgb(255, 0, 0);
+}
+
+#speed::-moz-range-thumb {
+  -webkit-appearance: none;
+  border-radius: 0.5vmin;
+  border-radius: 50%;
+  height: 3vmin;
+  width: 1.5vmin;
+  background-color: rgb(255, 0, 0);
+}

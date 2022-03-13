@@ -1,0 +1,55 @@
+.navbar {
+  padding: 15px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5vmax;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  justify-content: space-around;
+  background-color: rgb(216, 237, 255);
+  box-shadow: 0px 2px 2px rgb(141, 141, 129);
+}
+
+@media screen and (orientation: portrait) {
+  .navbar {
+    font-size: 2vmax;
+  }
+}
+
+.navlink {
+  margin: 5px 10px;
+  text-decoration: none;
+  color: blue;
+  text-align: center;
+}
+
+.navlink:hover {
+  animation: shake 100ms forwards;
+}
+
+.activeNavlink {
+  margin: 5px 10px;
+  color: rgb(0, 160, 0);
+  transform: scale(1.15);
+  text-decoration: none;
+  pointer-events: none;
+}
+
+@keyframes shake {
+  0% {
+    transform: skew(0deg);
+  }
+  30% {
+    transform: skew(20deg);
+  }
+  50% {
+    transform: skew(0deg);
+  }
+  70% {
+    transform: skew(-20deg);
+  }
+  100% {
+    transform: skew(0deg) scale(1.1);
+  }
+}
