@@ -3,6 +3,7 @@
   flex-direction: column;
   display: flex;
   background-image: url("/public/bg.svg");
+  background-size: cover;
 }
 
 .instructions {

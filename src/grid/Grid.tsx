@@ -27,7 +27,6 @@ const Grid: FC<Props> = ({ grid, gridWidth, disabled }) => {
         let id = parseInt(target.id);
         if (isNaN(id) === false) {
           grid[id] = true;
-          if (grid[id] === false) grid[id] = true;
           dispatch({ type: ActionTypes.MAKE_WALL, payload: { index: id } })
           target.classList.add("wall-animate");
         }
@@ -38,18 +37,18 @@ const Grid: FC<Props> = ({ grid, gridWidth, disabled }) => {
         let id = parseInt(target.id);
         if (isNaN(id) === false) {
           grid[id] = true;
-          if (grid[id] === false) grid[id] = true;
           dispatch({ type: ActionTypes.MAKE_WALL, payload: { index: id } })
           target.classList.add("wall-animate");
         }
       }}
       onTouchMove={(e) => {
         if (disabled) return;
-        let target = e.target as HTMLDivElement;
-        let id = parseInt(target.id);
+        const y = e.changedTouches[0].clientY;
+        const x = e.changedTouches[0].clientX;
+        const target = document.elementFromPoint(x, y) as HTMLDivElement;
+        let id = parseInt(target?.id);
         if (isNaN(id) === false) {
           grid[id] = true;
-          if (grid[id] === false) grid[id] = true;
           dispatch({ type: ActionTypes.MAKE_WALL, payload: { index: id } })
           target.classList.add("wall-animate");
         }

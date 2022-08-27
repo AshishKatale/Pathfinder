@@ -10,8 +10,7 @@ export default function Home() {
     <div className="home">
       <div className="instructions">
         <h3>
-          1) Click and Drag Grid cells (<i>swipe if on touch screen device</i>)
-          to mark them as wall.{" "}
+          1) Click and drag Grid cells to mark them as wall.{" "}
           <svg
             className='wall-img'
             width="21"
@@ -24,7 +23,7 @@ export default function Home() {
           </svg>
         </h3>
         <h3>
-          2) Click on any non-wall cell to mark it as Source.{" "}
+          2) Click on any cell to mark it as Source.{" "}
           <img src={process.env.PUBLIC_URL + '/source.svg'} alt="Source"></img>
         </h3>
         <h3>
@@ -50,20 +49,14 @@ export default function Home() {
       {showDemo &&
         <fieldset style={{ margin: "5px", borderRadius: "10px" }}>
           <legend
-            style={{ cursor: 'pointer' }}
-            onClick={
-              () => {
-                toggleShowDemo(!showDemo)
-              }}
+            style={{ cursor: 'pointer', color: 'white' }}
+            onClick={() => {
+              toggleShowDemo(!showDemo)
+            }}
           >
             Demo
           </legend>
-          {
-            navigator.maxTouchPoints > 0 ?
-              <video src={process.env.PUBLIC_URL + '/mobile.mp4'} autoPlay loop controls style={{ width: "100%", }}></video>
-              :
-              <video src={process.env.PUBLIC_URL + '/desktop.mp4'} autoPlay loop controls style={{ width: "100%", }}></video>
-          }
+          <video src={process.env.PUBLIC_URL + '/desktop.mp4'} autoPlay loop controls style={{ width: "100%", }}></video>
         </fieldset>
       }
     </div>

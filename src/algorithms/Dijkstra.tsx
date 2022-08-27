@@ -178,10 +178,6 @@ const Dijkstra = () => {
               alert("Source cannot be a wall");
               return;
             }
-            if (sourceId.current === destId.current) {
-              alert("Source and Destination should be distinct");
-              return;
-            }
             isSourceSelected.current = true;
             let src = document.getElementById(`source${sourceId.current}`) as HTMLDivElement;
             src.style.visibility = "visible";
@@ -191,6 +187,10 @@ const Dijkstra = () => {
           if (isNaN(destId.current) === false) {
             if (grid[destId.current] === true) {
               alert("Destination cannot be a wall");
+              return;
+            }
+            if (sourceId.current === destId.current) {
+              alert("Source and Destination should be distinct");
               return;
             }
             let dest = document.getElementById(`dest${destId.current}`) as HTMLDivElement;

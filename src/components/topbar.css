@@ -109,3 +109,9 @@
   width: 1.5vmin;
   background-color: rgb(255, 0, 0);
 }
+
+@media screen and (min-width: 1920px) {
+  #speed{
+    width: 10vw;
+  }
+}
